@@ -18,8 +18,8 @@ e. project build based on maven and gradle both.
       1. :\> gradle tasks
       2. :\> gradle run
       
-3. After run the project import the collection in POSTMAN.
-  a. first generate the session using basic auth and give the 'user' and 'password' of using login service.
-  b. after generating session user get x-auth-token in response based on base-64 encode.
+3. After run the project import the collection in POSTMAN which is available in folder "postman-collection"
+  a. First generate the session using basic auth of using login service.(Application.java have some already inserted users details in Database at time starting the application).
+  b. After generating session user get x-auth-token in response based on base-64 encode.
   c. generated x-auth-token pass in header of each request of remaining api to get the response otherwise you get not fully authorize.
       
