@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "a4939ba9-8566-4829-b528-f637658acdeb",
+		"name": "FincityCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "manish@fincity.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "kumar",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/incity/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"incity",
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "1735311c-8fce-4513-b3f2-e32bf2914584",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/fincity/api/v1/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "c9fbfdad-1b24-45cc-bb4a-18114bd50c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\" : \"Safari\",\r\n\t\"model\" :\"202\",\r\n\t\"manufactureName\":\"Tata\",\r\n\t\"manufacturingYear\" : 2010,\r\n\t\"color\":\"Red\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fincity/api/v1/cars",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search cars by name,model etc",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "c9fbfdad-1b24-45cc-bb4a-18114bd50c83",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/fincity/api/v1/cars/Tata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"cars",
+						"Tata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "c9fbfdad-1b24-45cc-bb4a-18114bd50c83",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Maruti\",\r\n        \"model\": \"800\",\r\n        \"manufactureName\": \"Tata\",\r\n        \"manufacturingYear\": \"2011\",\r\n        \"color\": \"Black\",\r\n        \"id\": 2\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/fincity/api/v1/cars",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete car",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "a6d090e8-d0dd-40ac-b251-2c7ae4f4246e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/fincity/api/v1/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search car by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "c9fbfdad-1b24-45cc-bb4a-18114bd50c83",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/fincity/api/v1/cars/car/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fincity",
+						"api",
+						"v1",
+						"cars",
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
