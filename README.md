@@ -1,11 +1,11 @@
 # spring-boot-rest-fincity-car
 
-This project has built on below technology.
-a. Spring security
-b. Spring Session with Redis server
-c. Spring HETOS for hypermedia response
-d. Spring JDBC with H2Database if required any RDBMS then change only configuration in application.properties.
-e. project build based on maven and gradle both.
+#This project has built on below technology.
+1. Spring security
+2. Spring Session with Redis server
+3. Spring HETOS for hypermedia response
+4. Spring JDBC with H2Database if required any RDBMS then change only configuration in application.properties.
+5. project build based on maven and gradle both.
 
 #How to Run the project in Local System follow the below steps.
 
